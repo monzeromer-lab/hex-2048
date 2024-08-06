@@ -4,7 +4,7 @@ const adjacent_directions = {'q': ['a', 'w'], 'w': ['q', 'e'], 'e': ['w', 'd'], 
 let endingModalDisplay;
 
 
-const CANVAS_SIZE = 600;
+const CANVAS_SIZE = 400;
 const SHIFT_X = 45, SHIFT_Y = 60;
 
 window.onload = function() {
