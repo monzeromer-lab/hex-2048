@@ -29,7 +29,7 @@ function calculateApproximateScreenDiagonalInInches() {
   return diagonalInches;
 }
 
-const CANVAS_SIZE = calculateApproximateScreenDiagonalInInches(); // 600;
+const CANVAS_SIZE = 600;// calculateApproximateScreenDiagonalInInches(); 
 const SHIFT_X = 45, SHIFT_Y = 60;
 
 window.onload = function() {
