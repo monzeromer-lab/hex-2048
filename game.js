@@ -2,34 +2,9 @@ const directions = ['q', 'w', 'e', 'a', 's', 'd'];
 const opposite_directions = {'q': 'd', 'w': 's', 'e': 'a', 'a': 'e', 's': 'w', 'd': 'q'};
 const adjacent_directions = {'q': ['a', 'w'], 'w': ['q', 'e'], 'e': ['w', 'd'], 'a': ['s', 'q'], 's': ['a', 'd'], 'd': ['e', 's']};
 let endingModalDisplay;
-function calculateApproximateScreenSizeInInches() {
-  const widthPx = window.innerWidth;
-  const heightPx = window.innerHeight;
-  const devicePixelRatio = window.devicePixelRatio || 1;
-
-  // Assuming a standard pixel density of 96 pixels per inch
-  const pixelsPerInch = 96;
-
-  const widthInches = widthPx / (devicePixelRatio * pixelsPerInch);
-  const heightInches = heightPx / (devicePixelRatio * pixelsPerInch);
-
-  return {
-    width: widthInches,
-    height: heightInches
-  };
-}
 
 
-function calculateApproximateScreenDiagonalInInches() {
-  const { width, height } = calculateApproximateScreenSizeInInches();
-
-  // Using the Pythagorean theorem to calculate the diagonal
-  const diagonalInches = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
-
-  return diagonalInches;
-}
-
-const CANVAS_SIZE = 600;// calculateApproximateScreenDiagonalInInches(); 
+const CANVAS_SIZE = 600;
 const SHIFT_X = 45, SHIFT_Y = 60;
 
 window.onload = function() {
